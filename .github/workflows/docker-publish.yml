@@ -1,4 +1,4 @@
-name: Build Docker image, push to GHCR, and trigger redeploy
+name: Build Image and Push to Registry
 
 on:
   workflow_dispatch:
