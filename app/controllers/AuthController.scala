@@ -92,6 +92,8 @@ class AuthController @Inject() (
                       SessionManager.KEY_USER_ID   -> user.id.toString,
                       SessionManager.KEY_OSM_ID    -> user.osmProfile.id.toString,
                       SessionManager.KEY_USER_TICK -> DateTime.now().getMillis.toString
+                    ).withCookies(
+                     Cookie("PLAY_SESSION", "value", secure = true)
                     )
 
                 Future(storeAPIKeyInOSM(user))
